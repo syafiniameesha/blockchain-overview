@@ -1,12 +1,13 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+    createRouter,
+    createWebHashHistory,
+} from "vue-router";
 
 import Homepage from "../views/Homepage.vue";
 import Blockchain from "../views/Blockchain/Blockchain.vue";
 import BlockchainListing from "../views/Blockchain/BlockchainListing.vue";
 
-
 const routes = [
-
     {
         path: "/",
         redirect: "/home",
@@ -14,7 +15,6 @@ const routes = [
 
     {
         path: "/home",
-        alias: "/home/",
         name: "Homepage",
         component: Homepage,
         meta: {
@@ -25,16 +25,13 @@ const routes = [
 
     {
         path: "/blockchain",
-        alias: "/blockchain/",
         name: "Blockchain",
         component: Blockchain,
         meta: {
             title: "Blockchain",
             icon: "",
         },
-
         children: [
-
             {
                 path: "",
                 name: "BlockchainListing",
@@ -44,21 +41,13 @@ const routes = [
                     icon: "",
                 },
             },
-
         ],
     },
-
 ];
 
-
 const router = createRouter({
-    history: createWebHistory(
-        "/blockchain-overview/"
-    ),
-
+    history: createWebHashHistory(),
     routes,
-
 });
-
 
 export default router;
