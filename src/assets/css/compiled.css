@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  height: 20px;
+  background: var(--color_grey_2);
+  border-radius: 5px;
+}
+* [contenteditable] {
+  outline: 0px solid transparent;
+}
+
+body {
+  overflow: hidden;
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+  margin: 1px;
+}
+
+.icon_github {
+  -webkit-mask: url(../icons/icon_github.svg) no-repeat center;
+  mask: url(../icons/icon_github.svg) no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes growFromTopLeft {
+  0% {
+    transform: scale(0);
+    transform-origin: top left;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+}
+@keyframes shrinkFromBottom {
+  0% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+@keyframes growFromTop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=compiled.css.map */

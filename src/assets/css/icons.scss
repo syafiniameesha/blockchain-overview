@@ -1,0 +1,12 @@
+.icon {
+	height: 18px;
+	width: 18px;
+	margin: 1px;
+}
+
+.icon_github {
+  -webkit-mask: url(../icons/icon_github.svg) no-repeat center;
+  mask: url(../icons/icon_github.svg) no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}

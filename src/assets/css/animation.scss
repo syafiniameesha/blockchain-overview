@@ -1,0 +1,55 @@
+// for now this all no need, use vue 3 transition tag and create as a component for reusable case
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes growFromTopLeft {
+	0% {
+		transform: scale(0);
+		transform-origin: top left;
+	}
+	100% {
+		transform: scale(1);
+		transform-origin: top left;
+	}
+}
+
+@keyframes shrinkFromBottom {
+	0% {
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+	100% {
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+}
+
+@keyframes growFromTop {
+	0% {
+		transform: scaleY(0);
+		transform-origin: top;
+	}
+	100% {
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+}
+
+@keyframes floatUpDown {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

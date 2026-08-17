@@ -1,0 +1,37 @@
+{
+	"name": "project",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"local": "concurrently \"npm run scss:watch\" \"vite --mode dev\"",
+		"dev": "concurrently \"npm run scss:watch\" \"vite --mode dev\"",
+		"pro": "concurrently \"npm run scss:watch\" \"vite --mode pro\"",
+		"build:local": "concurrently \"npm run scss:watch\" \"vite build --mode dev\"",
+		"build:dev": "concurrently \"npm run scss:watch\" \"vite build --mode dev\"",
+		"build:pro": "npm run scss:build && vite build --mode pro",
+  		"deploy": "npm run build:pro && gh-pages -d dist",
+		"serve": "vite preview --3007",
+		"scss:watch": "sass --watch src/assets/css/compiled.scss:src/assets/css/compiled.css",
+		"scss:build": "sass src/assets/css/compiled.scss:src/assets/css/compiled.css"
+	},
+	"dependencies": {
+		"@element-plus/icons-vue": "^2.3.1",
+		"axios": "^1.7.2",
+		"element-plus": "^2.7.6",
+		"express": "^4.21.0",
+		"mitt": "^3.0.1",
+		"pinia": "^2.3.1",
+		"vue": "^3.4.29",
+		"vue-router": "^4.4.0",
+		"vuex": "^4.1.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.0.5",
+		"concurrently": "^9.0.1",
+		"sass": "^1.79.3",
+		"unplugin-auto-import": "^0.18.3",
+		"unplugin-vue-components": "^0.27.4",
+		"vite": "^5.3.1"
+	}
+}
