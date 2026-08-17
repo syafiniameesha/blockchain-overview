@@ -7,6 +7,7 @@
 		"local": "concurrently \"npm run scss:watch\" \"vite --mode dev\"",
 		"dev": "concurrently \"npm run scss:watch\" \"vite --mode dev\"",
 		"pro": "concurrently \"npm run scss:watch\" \"vite --mode pro\"",
+		"build": "npm run scss:build && vite build --mode pro",
 		"build:local": "concurrently \"npm run scss:watch\" \"vite build --mode dev\"",
 		"build:dev": "concurrently \"npm run scss:watch\" \"vite build --mode dev\"",
 		"build:pro": "npm run scss:build && vite build --mode pro",
