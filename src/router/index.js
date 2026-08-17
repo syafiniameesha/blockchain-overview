@@ -1,7 +1,4 @@
-import {
-    createRouter,
-    createWebHashHistory,
-} from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 import Homepage from "../views/Homepage.vue";
 import Blockchain from "../views/Blockchain/Blockchain.vue";
@@ -12,34 +9,20 @@ const routes = [
         path: "/",
         redirect: "/home",
     },
-
     {
         path: "/home",
         name: "Homepage",
         component: Homepage,
-        meta: {
-            title: "Homepage",
-            icon: "",
-        },
     },
-
     {
         path: "/blockchain",
         name: "Blockchain",
         component: Blockchain,
-        meta: {
-            title: "Blockchain",
-            icon: "",
-        },
         children: [
             {
                 path: "",
                 name: "BlockchainListing",
                 component: BlockchainListing,
-                meta: {
-                    title: "BlockchainListing",
-                    icon: "",
-                },
             },
         ],
     },
