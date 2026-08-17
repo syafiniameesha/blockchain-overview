@@ -255,9 +255,10 @@ export default {
 
     .box {
         padding: 25px 40px;
-        background: #fff;
+        background: #212027;
         border: 1px solid #ddd;
         font-weight: 600;
+        color: #FFF;
     }
 
     span {
@@ -275,9 +276,9 @@ export default {
 }
 
 .benefit {
-    background: #fff;
+    background: #7297bc;
     padding: 35px;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
 
     h3 {
         margin: 0 0 15px;
@@ -286,7 +287,7 @@ export default {
 
     p {
         margin: 0;
-        color: #666;
+        color: #fff;
         line-height: 1.5;
     }
 }
