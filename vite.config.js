@@ -7,7 +7,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: '/', // This sets the base URL for your app
+	base: "/blockchain-overview/", // This sets the base URL for your app
 	server: {
 		port: 5173, // Ensure you're still running on port 3003
 		host: '0.0.0.0',
