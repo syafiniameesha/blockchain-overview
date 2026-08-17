@@ -276,7 +276,7 @@ export default {
 }
 
 .benefit {
-    background: #7297bc;
+    background: #d4e2eb;
     padding: 35px;
     border: 1px solid #fff;
 
@@ -287,7 +287,7 @@ export default {
 
     p {
         margin: 0;
-        color: #fff;
+        color: #000;
         line-height: 1.5;
     }
 }
