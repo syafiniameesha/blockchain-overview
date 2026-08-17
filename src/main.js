@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia"; 
+import { createPinia } from "pinia";
 
 import * as ElIcon from "@element-plus/icons-vue";
 
@@ -11,19 +11,22 @@ import "/src/assets/css/compiled.css";
 
 import mitt from "mitt";
 
-const emiiter = mitt();
+const emitter = mitt();
 
 const app = createApp(App);
 
-app.config.globalProperties.emitter = emiiter;
+app.config.globalProperties.emitter = emitter;
 
-// Create a Pinia instance
+// Pinia
 const pinia = createPinia();
 app.use(pinia);
 
+// Element Plus Icons
 Object.keys(ElIcon).forEach((key) => {
-	app.component(key, ElIcon[key]);
+    app.component(key, ElIcon[key]);
 });
 
+// Router
 app.use(router);
+
 app.mount("#app");
